@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +93,28 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl font-bold text-portfolio-navy mb-6 inline-block relative after:content-[''] after:absolute after:w-1/2 after:h-1 after:bg-portfolio-blue after:bottom-0 after:left-0 pb-2;
+  }
+
+  .section-container {
+    @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+
+  .skill-tag {
+    @apply bg-portfolio-light-gray text-portfolio-navy px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2;
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l border-portfolio-light-blue;
+  }
+
+  .timeline-dot {
+    @apply absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-portfolio-blue;
   }
 }
