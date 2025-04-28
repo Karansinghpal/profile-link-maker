@@ -8,7 +8,7 @@ const EducationSection = () => {
       degree: "Bachelor of Technology - Computer Science and Engineering",
       location: "Punjab, India",
       period: "Since August 2022",
-      Cgpa: "7.00"
+      Cgpa: "7.20"
     },
     {
       institution: "Mahavir Inter College",
@@ -64,7 +64,11 @@ const EducationSection = () => {
           <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Education</h3>
           <div className="space-y-8">
             {education.map((edu, index) => (
-              <Card key={index} className="transition-transform hover:scale-105 hover:shadow-2xl bg-white rounded-xl border border-gray-200">
+              <Card 
+                key={index} 
+                className="transition-transform hover:scale-105 hover:shadow-2xl bg-white rounded-xl border border-gray-200
+                hover:bg-gradient-to-r hover:from-red-600 hover:to-black hover:text-white"
+              >
                 <CardHeader className="pb-0">
                   <CardTitle className="text-xl font-bold text-portfolio-navy">{edu.institution}</CardTitle>
                 </CardHeader>
@@ -74,7 +78,7 @@ const EducationSection = () => {
                   <div className="flex justify-between items-center mt-3 text-sm">
                     <span className="text-portfolio-blue">{edu.period}</span>
                     <span className="font-semibold">
-                      {edu.gpa ? `Cgpa: ${edu.Cgpa}` : `Percentage: ${edu.percentage}`}
+                      {edu.Cgpa ? `Cgpa: ${edu.Cgpa}` : `Percentage: ${edu.percentage}`}
                     </span>
                   </div>
                 </CardContent>
@@ -93,7 +97,8 @@ const EducationSection = () => {
                 key={index}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-xl p-6 shadow-sm bg-white border border-gray-200 transition-all duration-300 hover:bg-gradient-to-r hover:from-red-600 hover:to-black hover:text-white hover:scale-105"
+                className="block rounded-xl p-6 shadow-sm bg-white border border-gray-200
+                transition-all duration-300 hover:bg-gradient-to-r hover:from-red-600 hover:to-black hover:text-white hover:scale-105"
               >
                 <h4 className="text-lg font-semibold mb-2">{cert.title}</h4>
                 {cert.issuer && (
