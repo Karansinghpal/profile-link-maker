@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -31,28 +30,28 @@ const NavBar = () => {
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        scrolled ? 'bg-white shadow-xl py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="text-xl font-bold text-portfolio-navy">
-            KSP<span className="text-portfolio-blue">.dev</span>
+          <Link to="/" className="text-3xl font-bold text-portfolio-navy hover:text-portfolio-blue transition-all duration-300">
+            <span className="text-portfolio-blue">KSP</span> {/* You can adjust logo text */}
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className={`px-3 py-2 text-sm font-medium rounded-md hover:bg-portfolio-light-gray ${
+              className={`px-4 py-3 text-lg font-medium rounded-full transition-all duration-300 hover:bg-portfolio-light-gray hover:text-portfolio-navy ${
                 index === navLinks.length - 1
                   ? 'ml-2 bg-portfolio-navy text-white hover:bg-portfolio-blue'
-                  : 'text-gray-700 hover:text-portfolio-navy'
+                  : 'text-gray-700 hover:text-portfolio-blue'
               }`}
             >
               {link.name}
@@ -98,12 +97,12 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="container mx-auto px-4 py-2 space-y-1">
+          <div className="container mx-auto px-6 py-4 space-y-4">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-portfolio-light-gray hover:text-portfolio-navy rounded-md"
+                className="block px-6 py-3 text-xl font-medium text-gray-700 hover:bg-portfolio-light-gray hover:text-portfolio-navy rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
