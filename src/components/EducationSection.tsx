@@ -8,7 +8,7 @@ const EducationSection = () => {
       degree: "Bachelor of Technology - Computer Science and Engineering",
       location: "Punjab, India",
       period: "Since August 2022",
-      Cgpa: "7.20"
+      Cgpa: "7.00"
     },
     {
       institution: "Mahavir Inter College",
@@ -58,12 +58,13 @@ const EducationSection = () => {
       <h2 className="section-title text-center text-4xl font-bold text-portfolio-navy mb-12">Education & Certifications</h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto px-4">
+        
         {/* Education Section */}
-        <div className="animate-slideUp">
+        <div>
           <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Education</h3>
           <div className="space-y-8">
             {education.map((edu, index) => (
-              <Card key={index} className="transition transform hover:scale-105 hover:shadow-xl bg-white rounded-xl border border-gray-200 animate-fadeIn delay-[100ms]">
+              <Card key={index} className="transition-transform hover:scale-105 hover:shadow-2xl bg-white rounded-xl border border-gray-200">
                 <CardHeader className="pb-0">
                   <CardTitle className="text-xl font-bold text-portfolio-navy">{edu.institution}</CardTitle>
                 </CardHeader>
@@ -73,7 +74,7 @@ const EducationSection = () => {
                   <div className="flex justify-between items-center mt-3 text-sm">
                     <span className="text-portfolio-blue">{edu.period}</span>
                     <span className="font-semibold">
-                      {edu.gpa ? `GPA: ${edu.gpa}` : `Percentage: ${edu.percentage}`}
+                      {edu.gpa ? `Cgpa: ${edu.Cgpa}` : `Percentage: ${edu.percentage}`}
                     </span>
                   </div>
                 </CardContent>
@@ -83,31 +84,27 @@ const EducationSection = () => {
         </div>
 
         {/* Certifications Section */}
-        <div className="animate-slideUp delay-[200ms]">
+        <div>
           <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Certifications</h3>
           <div className="space-y-6">
             {certifications.map((cert, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-500 border border-gray-200 hover:border-portfolio-blue transform hover:scale-105 animate-fadeIn"
+              <a 
+                href={cert.link}
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-xl p-6 shadow-sm bg-white border border-gray-200 transition-all duration-300 hover:bg-gradient-to-r hover:from-red-600 hover:to-black hover:text-white hover:scale-105"
               >
-                <h4 className="text-lg font-semibold text-portfolio-navy">{cert.title}</h4>
-                {cert.issuer && <p className="text-sm text-gray-600 mt-1">Issuer: {cert.issuer}</p>}
-                <p className="text-sm text-portfolio-blue mt-3">{cert.period}</p>
-                {cert.link && (
-                  <a 
-                    href={cert.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block mt-3 text-blue-600 text-sm transition-transform hover:scale-110 hover:text-blue-800 underline underline-offset-4"
-                  >
-                    🎖️ View Certificate
-                  </a>
+                <h4 className="text-lg font-semibold mb-2">{cert.title}</h4>
+                {cert.issuer && (
+                  <p className="text-sm mb-1">{cert.issuer}</p>
                 )}
-              </div>
+                <p className="text-sm">{cert.period}</p>
+              </a>
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
