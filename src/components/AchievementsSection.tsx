@@ -44,7 +44,7 @@ const AchievementsSection = () => {
         <div className="w-full max-w-4xl bg-white rounded-lg p-8 shadow-md flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2 h-64 rounded-lg overflow-hidden">
             <img 
-              src={"/nss.png"} 
+              src="/nss.jpg" 
               alt="NSS Volunteering" 
               className="w-full h-full object-cover"
             />
