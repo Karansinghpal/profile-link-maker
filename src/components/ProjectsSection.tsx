@@ -36,41 +36,50 @@ const ProjectsSection = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-portfolio-navy text-center mb-12">Projects</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-gray-200 rounded-2xl">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardHeader className="bg-white">
-                <CardTitle className="text-xl font-bold text-portfolio-navy">{project.title}</CardTitle>
-                <CardDescription className="text-portfolio-gray">{project.period}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow pt-4">
-                <p className="text-gray-700 text-sm mb-4">{project.description}</p>
-                <div className="mb-4">
-                  <h4 className="font-semibold text-sm text-portfolio-blue mb-2">Key Features:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
-                    {project.features.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
+          {projects.map((project, index) => {
+            const isEcommerce = project.title === "E-Commerce"; // Check if project is E-commerce
+            return (
+              <Card
+                key={index}
+                className={`overflow-hidden transition-all duration-300 flex flex-col h-full border border-gray-200 rounded-2xl cursor-pointer
+                  hover:shadow-2xl hover:-translate-y-2
+                  ${isEcommerce ? "hover:bg-gradient-to-r hover:from-red-600 hover:to-black" : "hover:bg-gray-100"}
+                `}
+              >
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader className="bg-white">
+                  <CardTitle className="text-xl font-bold text-portfolio-navy">{project.title}</CardTitle>
+                  <CardDescription className="text-portfolio-gray">{project.period}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow pt-4">
+                  <p className="text-gray-700 text-sm mb-4">{project.description}</p>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-sm text-portfolio-blue mb-2">Key Features:</h4>
+                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
+                      {project.features.map((feature, idx) => (
+                        <li key={idx}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+                <CardFooter className="bg-white border-t border-gray-100 pt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, idx) => (
+                      <Badge key={idx} variant="outline" className="bg-portfolio-navy text-white hover:bg-portfolio-blue text-xs px-3 py-1 rounded-full">
+                        {tech}
+                      </Badge>
                     ))}
-                  </ul>
-                </div>
-              </CardContent>
-              <CardFooter className="bg-white border-t border-gray-100 pt-4">
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, idx) => (
-                    <Badge key={idx} variant="outline" className="bg-portfolio-navy text-white hover:bg-portfolio-blue text-xs px-3 py-1 rounded-full">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardFooter>
-            </Card>
-          ))}
+                  </div>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
 
         {/* GitHub link */}
@@ -78,9 +87,9 @@ const ProjectsSection = () => {
           <div className="w-full max-w-3xl bg-white rounded-2xl p-8 shadow-lg text-center">
             <h3 className="text-2xl font-bold text-portfolio-navy mb-4">Want to see more?</h3>
             <p className="text-gray-600 mb-6">Check out my GitHub repository for more projects and code samples.</p>
-            <a 
-              href="https://github.com/Karansinghpal" 
-              target="_blank" 
+            <a
+              href="https://github.com/Karansinghpal"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-portfolio-navy hover:bg-portfolio-blue text-white py-3 px-6 rounded-full transition-all duration-300"
             >
