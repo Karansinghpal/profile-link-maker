@@ -4,9 +4,10 @@ import { ArrowRight, Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center bg-gradient-to-br from-white to-portfolio-light-gray">
+    <div className="min-h-screen flex flex-col justify-center bg-gradient-to-br from-[#ffffff] via-[#f0f2f5] to-[#dbeafe]">
       <div className="container mx-auto px-4 py-16 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
           {/* Text Content */}
           <div className="order-2 md:order-1">
             <h1 className="text-4xl md:text-6xl font-bold text-portfolio-navy mb-4">
@@ -77,6 +78,7 @@ const HeroSection = () => {
               />
             </div>
           </div>
+
         </div>
       </div>
     </div>
