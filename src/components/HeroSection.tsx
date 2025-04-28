@@ -50,7 +50,7 @@ const HeroSection = () => {
                 <Github size={24} />
               </a>
               <a 
-                href="mailto:kp210542@gmail.com"
+                href="mailto:kp5495423@gmail.com"
                 className="text-portfolio-navy hover:text-portfolio-blue transition-colors"
               >
                 <Mail size={24} />
