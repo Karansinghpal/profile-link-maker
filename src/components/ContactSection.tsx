@@ -166,4 +166,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-do more stylish more animated and also fix dive size also
+
