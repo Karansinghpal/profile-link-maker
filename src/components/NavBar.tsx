@@ -38,7 +38,7 @@ const NavBar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="text-3xl font-bold text-portfolio-navy hover:text-portfolio-blue transition-all duration-300">
-            <span className="text-portfolio-blue">KSP</span> {/* You can adjust logo text */}
+            <span className="text-portfolio-blue"></span> {/* You can adjust logo text */}
           </Link>
         </div>
 
