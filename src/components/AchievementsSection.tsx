@@ -1,5 +1,5 @@
-
 import React from 'react';
+import NssImage from '../assets/ea8daddc-0956-40f9-8262-f6999d5275e5.jpg'; // <-- Import NSS image
 
 const AchievementsSection = () => {
   const achievements = [
@@ -38,21 +38,24 @@ const AchievementsSection = () => {
           ))}
         </div>
       </div>
-      
+
+      {/* NSS Volunteering Section with Image */}
       <div className="flex justify-center mt-12">
         <div className="w-full max-w-4xl bg-white rounded-lg p-8 shadow-md flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2 h-48 bg-portfolio-light-blue rounded-lg overflow-hidden">
-            {/* Placeholder for achievement image */}
-            <div className="w-full h-full flex items-center justify-center text-white text-lg font-medium">
-              Achievement Image Placeholder
-            </div>
+          <div className="w-full md:w-1/2 h-64 rounded-lg overflow-hidden">
+            <img 
+              src={"/nss.png"} 
+              alt="NSS Volunteering" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="w-full md:w-1/2">
             <h3 className="text-2xl font-semibold text-portfolio-navy mb-3">Volunteering Experience</h3>
             <p className="text-gray-600">
-              As an NSS volunteer since August 2022, I've been actively involved in organizing social events 
-              including blood donation camps and plantation drives. This experience has strengthened my leadership 
-              and teamwork skills while making a positive impact on the community.
+              As an NSS volunteer since August 2022, I have actively participated in organizing social impact events 
+              such as blood donation drives, plantation campaigns, and community awareness programs. These experiences 
+              have significantly enhanced my leadership, teamwork, and event management skills while contributing 
+              positively to society.
             </p>
           </div>
         </div>
