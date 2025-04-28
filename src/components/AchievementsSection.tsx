@@ -1,5 +1,5 @@
 import React from 'react';
-import NssImage from '../assets/ea8daddc-0956-40f9-8262-f6999d5275e5.jpg'; // <-- Import NSS image
+//import NssImage from '../assets/ea8daddc-0956-40f9-8262-f6999d5275e5.jpg'; // <-- Import NSS image
 
 const AchievementsSection = () => {
   const achievements = [
