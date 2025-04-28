@@ -67,7 +67,7 @@ const HeroSection = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-portfolio-light-gray border-4 border-portfolio-blue overflow-hidden">
               {/* Image placeholder */}
               <img 
-                src="/public/lovable-uploads/5aaca06a-357f-4126-9979-226f62ed1a1f.png" 
+                src="/Karan.jpg" 
                 alt="Karan Singh Pal" 
                 className="w-full h-full object-cover"
               />
