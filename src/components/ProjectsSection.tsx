@@ -2,11 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-// Import your project images (make sure these paths are correct)
-import bookImg from '@/assets/images/book-management.jpg';
-import notesImg from '@/assets/images/notes-app.jpg';
-import ecommerceImg from '@/assets/images/ecommerce.jpg';
-
 const ProjectsSection = () => {
   const projects = [
     {
@@ -15,7 +10,7 @@ const ProjectsSection = () => {
       description: "Developed a full-stack book management system using MongoDB, Express.js, React.js, and Node.js. Implemented CRUD operations for adding, updating, deleting, and retrieving book records. Designed a responsive UI for seamless user experience.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "RESTful APIs"],
       features: ["CRUD operations", "Responsive UI", "Efficient data handling"],
-      image: bookImg
+      image: "https://source.unsplash.com/featured/?books,library"
     },
     {
       title: "Notes Application",
@@ -23,7 +18,7 @@ const ProjectsSection = () => {
       description: "Developed a Notes Application using the MERN stack with features like note creation, editing, and deletion. Implemented user authentication, real-time updates, and local storage for seamless user experience. Optimized backend with Node.js and MongoDB to ensure fast and secure data handling.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Postman", "Redux/JS"],
       features: ["User authentication", "Real-time updates", "Local storage"],
-      image: notesImg
+      image: "https://source.unsplash.com/featured/?notes,writing"
     },
     {
       title: "E-Commerce",
@@ -31,7 +26,7 @@ const ProjectsSection = () => {
       description: "Designed a responsive interface using React.js and integrated secure backend APIs. Implemented robust data validation protocols, reducing security vulnerabilities by identifying critical issues within the first month. Implemented user authentication, payment gateway services, and performance optimizations for an enhanced user experience.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Postman"],
       features: ["Security validation", "Payment gateway", "Performance optimization"],
-      image: ecommerceImg
+      image: "https://source.unsplash.com/featured/?ecommerce,shopping"
     }
   ];
 
