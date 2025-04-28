@@ -7,6 +7,7 @@ const AchievementsSection = () => {
       title: "Completed a Project Of Notes Application by CipherSchools",
       date: "July 2024",
       description: "Successfully built and deployed a full-featured notes application with user authentication and real-time updates."
+    
     },
     {
       title: "Participated in Online quiz on Cyber Hygiene Practices",
