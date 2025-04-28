@@ -37,10 +37,7 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-gray-200 rounded-2xl bg-white hover:bg-gray-100 cursor-pointer"
-            >
+            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-gray-200 rounded-2xl">
               <div className="h-48 overflow-hidden">
                 <img 
                   src={project.image} 
