@@ -4,7 +4,7 @@ import { ArrowRight, Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center bg-gradient-to-br from-[#ffffff] via-[#f0f2f5] to-[#dbeafe]">
+    <div className="min-h-screen flex flex-col justify-center bg-gradient-to-br from-[#ffefef] via-[#ffe6e6] to-[#ffcccc]">
       <div className="container mx-auto px-4 py-16 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
