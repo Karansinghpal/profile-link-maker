@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       description: "Developed a full-stack book management system using MongoDB, Express.js, React.js, and Node.js. Implemented CRUD operations for adding, updating, deleting, and retrieving book records. Designed a responsive UI for seamless user experience.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "RESTful APIs"],
       features: ["CRUD operations", "Responsive UI", "Efficient data handling"],
-      image: "https://source.unsplash.com/featured/?books,library"
+      image: "book.jpg"
     },
     {
       title: "Notes Application",
