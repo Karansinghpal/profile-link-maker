@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   const skills = [
@@ -9,74 +10,91 @@ const AboutSection = () => {
   ];
 
   return (
-    <div id="about" className="py-16 bg-gradient-to-b from-white to-portfolio-light-gray">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-portfolio-navy text-center mb-12">
+    <section id="about" className="py-20 bg-gradient-to-b from-white to-portfolio-light-gray">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.h2 
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center text-portfolio-navy mb-16"
+        >
           About Me
-        </h2>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
           {/* Contact Card */}
-          <div className="lg:col-span-1">
-            <div className="bg-white shadow-lg rounded-lg p-8 h-full flex flex-col justify-center border border-gray-200">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-portfolio-blue">Contact Information</h3>
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    <span className="font-semibold">Email:</span>{' '}
-                    <a href="mailto:kp210542@gmail.com" className="text-portfolio-navy hover:text-portfolio-blue underline">
-                      kp210542@gmail.com
-                    </a>
-                  </p>
-                  <p>
-                    <span className="font-semibold">Phone:</span>{' '}
-                    <a href="tel:+917651995122" className="text-portfolio-navy hover:text-portfolio-blue underline">
-                      +91-7651995122
-                    </a>
-                  </p>
-                  <p>
-                    <span className="font-semibold">LinkedIn:</span>{' '}
-                    <a href="https://www.linkedin.com/in/karan-singh-pal-5846ab24b/" target="_blank" rel="noopener noreferrer" className="text-portfolio-navy hover:text-portfolio-blue underline">
-                      Karan Singh Pal
-                    </a>
-                  </p>
-                  <p>
-                    <span className="font-semibold">GitHub:</span>{' '}
-                    <a href="https://github.com/Karansinghpal" target="_blank" rel="noopener noreferrer" className="text-portfolio-navy hover:text-portfolio-blue underline">
-                      Karansinghpal
-                    </a>
-                  </p>
-                </div>
-              </div>
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="bg-white shadow-xl rounded-3xl p-8 flex flex-col justify-center border border-gray-200 hover:shadow-2xl transition-all duration-300"
+          >
+            <h3 className="text-2xl font-bold text-portfolio-blue mb-6 text-center">Contact Information</h3>
+            <div className="space-y-5 text-gray-700 text-center">
+              <p>
+                <span className="font-semibold">Email:</span>{' '}
+                <a href="mailto:kp210542@gmail.com" className="text-portfolio-navy hover:text-portfolio-blue underline transition-colors">
+                  kp210542@gmail.com
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold">Phone:</span>{' '}
+                <a href="tel:+917651995122" className="text-portfolio-navy hover:text-portfolio-blue underline transition-colors">
+                  +91-7651995122
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold">LinkedIn:</span>{' '}
+                <a href="https://www.linkedin.com/in/karan-singh-pal-5846ab24b/" target="_blank" rel="noopener noreferrer" className="text-portfolio-navy hover:text-portfolio-blue underline transition-colors">
+                  Karan Singh Pal
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold">GitHub:</span>{' '}
+                <a href="https://github.com/Karansinghpal" target="_blank" rel="noopener noreferrer" className="text-portfolio-navy hover:text-portfolio-blue underline transition-colors">
+                  Karansinghpal
+                </a>
+              </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Skills Card */}
-          <div className="lg:col-span-2">
-            <h3 className="text-3xl font-semibold text-portfolio-blue mb-8">Skills</h3>
-            <div className="space-y-8">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2 bg-white shadow-xl rounded-3xl p-10 border border-gray-200 hover:shadow-2xl transition-all duration-300"
+          >
+            <h3 className="text-3xl font-bold text-portfolio-blue mb-10 text-center">Skills</h3>
+            <div className="space-y-10">
               {skills.map((skillGroup) => (
                 <div key={skillGroup.category}>
-                  <h4 className="text-2xl text-portfolio-navy font-medium mb-3">
+                  <h4 className="text-2xl text-portfolio-navy font-semibold mb-4">
                     {skillGroup.category}:
                   </h4>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-4">
                     {skillGroup.items.map((skill) => (
-                      <span
+                      <motion.span
                         key={skill}
-                        className="bg-portfolio-blue/10 text-portfolio-navy px-4 py-2 rounded-full text-sm font-medium hover:bg-portfolio-blue/20 transition-all duration-200"
+                        whileHover={{ scale: 1.1 }}
+                        className="bg-portfolio-blue/10 text-portfolio-navy px-5 py-2 rounded-full text-sm font-medium hover:bg-portfolio-blue/20 transition-all cursor-pointer"
                       >
                         {skill}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
