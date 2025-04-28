@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, GitHub, Linkedin, Mail, Phone } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="text-portfolio-navy hover:text-portfolio-blue transition-colors"
               >
-                <GitHub size={24} />
+                <Github size={24} />
               </a>
               <a 
                 href="mailto:kp210542@gmail.com"

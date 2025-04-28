@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GitHub, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const ContactSection = () => {
@@ -118,7 +118,7 @@ const ContactSection = () => {
                 
                 <div className="flex items-center gap-3">
                   <div className="bg-portfolio-light-gray p-2 rounded-full">
-                    <GitHub size={20} className="text-portfolio-navy" />
+                    <Github size={20} className="text-portfolio-navy" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">GitHub</p>
@@ -153,7 +153,7 @@ const ContactSection = () => {
                     className="bg-portfolio-light-gray hover:bg-portfolio-blue hover:text-white p-2 rounded-full transition-colors"
                     aria-label="GitHub"
                   >
-                    <GitHub size={20} />
+                    <Github size={20} />
                   </a>
                 </div>
               </div>
