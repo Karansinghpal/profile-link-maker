@@ -32,7 +32,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:kp210542@gmail.com"
+                href="mailto:kp5495423@gmail.com"
                 className="text-gray-300 hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -69,7 +69,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                Email: <a href="mailto:kp210542@gmail.com" className="hover:text-white transition-colors">kp210542@gmail.com</a>
+                Email: <a href="mailto:kp5495423@gmail.com" className="hover:text-white transition-colors">kp210542@gmail.com</a>
               </li>
               <li>
                 Phone: <a href="tel:+917651995122" className="hover:text-white transition-colors">+91-7651995122</a>
