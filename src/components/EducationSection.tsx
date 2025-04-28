@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -45,28 +44,29 @@ const EducationSection = () => {
     },
     {
       title: "The Bits and Bytes of Computer Networking",
-      issuer: "",
+      issuer: "Google (Coursera)",
       period: "January 2024 - February 2024"
     }
   ];
 
   return (
-    <div id="education" className="section-container bg-white">
-      <h2 className="section-title">Education & Certifications</h2>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
+    <div id="education" className="section-container bg-gradient-to-br from-white via-gray-50 to-gray-100 py-16">
+      <h2 className="section-title text-center text-4xl font-bold text-portfolio-navy mb-12">Education & Certifications</h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto px-4">
+        {/* Education Section */}
         <div>
-          <h3 className="text-2xl font-semibold text-portfolio-navy mb-6">Education</h3>
-          <div className="space-y-6">
+          <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Education</h3>
+          <div className="space-y-8">
             {education.map((edu, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg font-bold text-portfolio-navy">{edu.institution}</CardTitle>
+              <Card key={index} className="transition transform hover:scale-105 hover:shadow-xl bg-white rounded-xl border border-gray-200">
+                <CardHeader className="pb-0">
+                  <CardTitle className="text-xl font-bold text-portfolio-navy">{edu.institution}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="font-medium">{edu.degree}</p>
-                  <p className="text-sm text-portfolio-gray mt-1">{edu.location}</p>
-                  <div className="flex justify-between items-center mt-2 text-sm">
+                <CardContent className="py-4">
+                  <p className="font-medium text-lg">{edu.degree}</p>
+                  <p className="text-sm text-gray-500 mt-1">{edu.location}</p>
+                  <div className="flex justify-between items-center mt-3 text-sm">
                     <span className="text-portfolio-blue">{edu.period}</span>
                     <span className="font-semibold">
                       {edu.gpa ? `GPA: ${edu.gpa}` : `Percentage: ${edu.percentage}`}
@@ -77,18 +77,19 @@ const EducationSection = () => {
             ))}
           </div>
         </div>
-        
+
+        {/* Certifications Section */}
         <div>
-          <h3 className="text-2xl font-semibold text-portfolio-navy mb-6">Certifications</h3>
-          <div className="space-y-4">
+          <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Certifications</h3>
+          <div className="space-y-6">
             {certifications.map((cert, index) => (
               <div 
                 key={index} 
-                className="p-4 rounded-lg border border-gray-200 hover:border-portfolio-blue transition-colors"
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition border border-gray-200 hover:border-portfolio-blue"
               >
-                <h4 className="font-semibold text-portfolio-navy">{cert.title}</h4>
+                <h4 className="text-lg font-semibold text-portfolio-navy">{cert.title}</h4>
                 {cert.issuer && <p className="text-sm text-gray-600 mt-1">Issuer: {cert.issuer}</p>}
-                <p className="text-sm text-portfolio-blue mt-2">{cert.period}</p>
+                <p className="text-sm text-portfolio-blue mt-3">{cert.period}</p>
               </div>
             ))}
           </div>
