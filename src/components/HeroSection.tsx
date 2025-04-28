@@ -71,7 +71,7 @@ const HeroSection = () => {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-portfolio-light-gray border-4 border-portfolio-blue overflow-hidden hover:scale-105 transition-transform duration-300 shadow-lg">
               <img 
-                src="/Karan.jpg" 
+                src="/KaranNew.jpg" 
                 alt="Karan Singh Pal" 
                 className="w-full h-full object-cover"
               />
