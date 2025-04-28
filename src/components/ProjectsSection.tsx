@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       description: "Developed a Notes Application using the MERN stack with features like note creation, editing, and deletion. Implemented user authentication, real-time updates, and local storage for seamless user experience. Optimized backend with Node.js and MongoDB to ensure fast and secure data handling.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Postman", "Redux/JS"],
       features: ["User authentication", "Real-time updates", "Local storage"],
-      image: "https://source.unsplash.com/featured/?notes,writing"
+      image: "https://i0.wp.com/highschool.latimes.com/wp-content/uploads/2019/01/45692459364_2d91368a04_z.jpg?fit=640%2C427&ssl=1"
     },
     {
       title: "E-Commerce",
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       description: "Designed a responsive interface using React.js and integrated secure backend APIs. Implemented robust data validation protocols, reducing security vulnerabilities by identifying critical issues within the first month. Implemented user authentication, payment gateway services, and performance optimizations for an enhanced user experience.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Postman"],
       features: ["Security validation", "Payment gateway", "Performance optimization"],
-      image: "https://source.unsplash.com/featured/?ecommerce,shopping"
+      image: "https://www.notiontechnologies.com/blog/wp-content/uploads/2023/03/how-to-build-an-ecommerce-website-from-scratch.webp"
     }
   ];
 
@@ -37,7 +37,10 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-gray-200 rounded-2xl">
+            <Card 
+              key={index} 
+              className="overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-gray-200 rounded-2xl bg-white hover:bg-gray-100 cursor-pointer"
+            >
               <div className="h-48 overflow-hidden">
                 <img 
                   src={project.image} 
