@@ -8,7 +8,7 @@ const EducationSection = () => {
       degree: "Bachelor of Technology - Computer Science and Engineering",
       location: "Punjab, India",
       period: "Since August 2022",
-      gpa: "7.00"
+      Cgpa: "7.20"
     },
     {
       institution: "Mahavir Inter College",
@@ -30,22 +30,26 @@ const EducationSection = () => {
     {
       title: "Full Stack Development using MERN Stack",
       issuer: "CipherSchools",
-      period: "June 2024 - July 2024"
+      period: "June 2024 - July 2024",
+      link: "https://www.cipherschools.com/certificate/preview?id=66a76d5ed15c5abc1ea65ef5"
     },
     {
       title: "Server-side JavaScript with Node.JS by NIIT",
       issuer: "Coursera",
-      period: "January 2024 - April 2024"
+      period: "January 2024 - April 2024",
+      link: "https://www.coursera.org/account/accomplishments/certificate/8HYZMWMH2RD8"
     },
     {
       title: "HTML, CSS and JavaScript for Web Developers",
       issuer: "John Hopkins University",
-      period: "January 2024 - April 2024"
+      period: "January 2024 - April 2024",
+      link: "https://www.coursera.org/account/accomplishments/certificate/CJ83KDPYZV7M"
     },
     {
       title: "The Bits and Bytes of Computer Networking",
       issuer: "Google (Coursera)",
-      period: "January 2024 - February 2024"
+      period: "January 2024 - February 2024",
+      link: "https://www.coursera.org/account/accomplishments/certificate/MYDHFMUR83YF"
     }
   ];
 
@@ -55,11 +59,11 @@ const EducationSection = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto px-4">
         {/* Education Section */}
-        <div>
+        <div className="animate-slideUp">
           <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Education</h3>
           <div className="space-y-8">
             {education.map((edu, index) => (
-              <Card key={index} className="transition transform hover:scale-105 hover:shadow-xl bg-white rounded-xl border border-gray-200">
+              <Card key={index} className="transition transform hover:scale-105 hover:shadow-xl bg-white rounded-xl border border-gray-200 animate-fadeIn delay-[100ms]">
                 <CardHeader className="pb-0">
                   <CardTitle className="text-xl font-bold text-portfolio-navy">{edu.institution}</CardTitle>
                 </CardHeader>
@@ -79,17 +83,27 @@ const EducationSection = () => {
         </div>
 
         {/* Certifications Section */}
-        <div>
+        <div className="animate-slideUp delay-[200ms]">
           <h3 className="text-2xl font-semibold text-portfolio-blue mb-8">Certifications</h3>
           <div className="space-y-6">
             {certifications.map((cert, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition border border-gray-200 hover:border-portfolio-blue"
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-500 border border-gray-200 hover:border-portfolio-blue transform hover:scale-105 animate-fadeIn"
               >
                 <h4 className="text-lg font-semibold text-portfolio-navy">{cert.title}</h4>
                 {cert.issuer && <p className="text-sm text-gray-600 mt-1">Issuer: {cert.issuer}</p>}
                 <p className="text-sm text-portfolio-blue mt-3">{cert.period}</p>
+                {cert.link && (
+                  <a 
+                    href={cert.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block mt-3 text-blue-600 text-sm transition-transform hover:scale-110 hover:text-blue-800 underline underline-offset-4"
+                  >
+                    🎖️ View Certificate
+                  </a>
+                )}
               </div>
             ))}
           </div>
