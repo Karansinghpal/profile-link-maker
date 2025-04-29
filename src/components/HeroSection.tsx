@@ -33,6 +33,11 @@ const HeroSection = () => {
                   View Projects <ArrowRight size={16} />
                 </a>
               </Button>
+              <Button className="bg-green-600 hover:bg-green-700 text-white transition-colors">
+                <a href="/KaranCV.pdf" download className="flex items-center gap-2">
+                  Download CV <ArrowRight size={16} />
+                </a>
+              </Button>
             </div>
 
             {/* Social Links */}
